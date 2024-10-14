@@ -1,6 +1,8 @@
-Durata implementării: aproximativ 4 zile de lucru.
+# 2048 in C
 
-Explicarea jocului:
+## Durata implementării: aproximativ 4 zile de lucru.
+
+## Explicarea jocului:
 
 În cadrul funcției principale, gestionăm mai multe aspecte ale jocului. În primul rând, avem o funcție dedicată afișării timpului și punctajului în fereastra jocului. Aceasta actualizează valorile și reînnoiește informațiile necesare într-o singură apelare.
 
