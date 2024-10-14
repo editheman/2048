@@ -1,77 +1,23 @@
-// 2048
-Durata implementare : aproximativ 4 zile de lucrat Explicarea jocului
-    : În cadrul funcției principale,
-      gestionăm multiple aspecte ale jocului.În primul rând,
-      avem o funcție dedicată afișării timpului și punctajului în fereastra
-              jocului.Aceasta are rolul de a actualiza valorile și de a regenera
-                  informațiile necesare într -
-          o singură apelare.
+Durata implementării: aproximativ 4 zile de lucru.
 
-          Apoi,
-      efectuăm verificări pentru a determina dacă autopilotul poate folosi
-          tastele stânga,
-      dreapta,
-      sus sau jos ca input -
-          uri valide
-              .Aceste verificări sunt esențiale pentru buna funcționare a
-                  autopilotului în cadrul jocului.
+Explicarea jocului:
 
-          Afișăm modificările create în funcția engine_joc pe ecran și aplicăm o
-              colorare distinctivă pentru fiecare celulă din matrice,
-      facilitând astfel alegerea unei celule neocupate.De asemenea,
-      generăm valorile 2 sau 4 în restul spațiilor disponibile,
-      urmând un algoritm specific pentru a ajunge la aceste valori.
+În cadrul funcției principale, gestionăm mai multe aspecte ale jocului. În primul rând, avem o funcție dedicată afișării timpului și punctajului în fereastra jocului. Aceasta actualizează valorile și reînnoiește informațiile necesare într-o singură apelare.
 
-      În continuare,
-      verificăm diverse condiții,
-      precum pierderea jocului,
-      atingerea punctajului maxim sau câștigarea jocului
-              .Este esențial să evaluăm aceste situații pentru a asigura o
-                  experiență de joc coerentă și captivantă.
+Apoi, efectuăm verificări pentru a determina dacă autopilotul poate folosi tastele săgeți (stânga, dreapta, sus sau jos) ca inputuri valide. Aceste verificări sunt esențiale pentru buna funcționare a autopilotului.
 
-          Următoarea etapă constă în evaluarea input -
-          ului primit și comunicarea programului în privința direcției în care
-              trebuie efectuate mișcările.Se verifică dacă input -
-          ul este valid și,
-      în caz afirmativ,
-      se generează un număr pe tabla de joc,
-      aplicând o verificare similară cu cea din funcția testare_matrice
-          .
+Modificările generate de funcția engine_joc sunt afișate pe ecran, aplicând o colorare distinctivă pentru fiecare celulă din matrice. Astfel, se facilitează alegerea unei celule neocupate. De asemenea, valorile 2 sau 4 sunt generate în spațiile disponibile, conform unui algoritm specific.
 
-      Începem un joc nou prin inițializarea culorilor necesare pentru colorarea
-          elementelor și utilizăm o matrice pentru a salva valorile celulelor ce
-              urmează să fie afișate.Alocăm ferestre pentru joc,
-      date și legendă,
-      oferind astfel o structură clară și organizată.
+În continuare, verificăm diverse condiții, precum pierderea jocului, atingerea punctajului maxim sau câștigarea jocului. Evaluarea acestor situații este esențială pentru a asigura o experiență de joc coerentă și captivantă.
 
-          Salvăm matricea într -
-          un fișier pentru a reveni la ea ulterior și reținem momentul ultimei
-              apăsări de taste de către utilizator,
-      oferind astfel funcționalitate autopilotului.Mesajele afișate variază în
-          funcție de stadiul jocului,
-      iar în cazul încheierii jocului,
-      utilizatorul este restricționat la input -
-          ul tastelor Q.
+Următoarea etapă constă în evaluarea inputului primit și comunicarea programului în privința direcției mișcărilor. Se verifică dacă inputul este valid, iar dacă este, se generează un număr pe tabla de joc, folosind o verificare similară cu cea din funcția testare_matrice.
 
-          Funcția de resume operează similar cu cea de joc nou,
-      cu excepția faptului că nu inițializează tabla de
-          joc.Efectuăm inițializările necesare pentru fereastra de meniu,
-      stabilind culorile și centrand opțiunile pentru a obține un aspect plăcut
-          și ordonat.
+Un joc nou începe prin inițializarea culorilor necesare pentru elementele jocului și utilizarea unei matrice pentru a salva valorile celulelor afișate. Fereastra pentru joc, date și legendă este alocată pentru a oferi o structură clară și organizată.
 
-      Decidem opțiunea în funcție de tasta apăsată și,
-      în cazul optiunii Quit,
-      ne asigurăm că fișierul de salvare este eliberat pentru a evita
-          persistența datelor.Pentru opțiunea Resume,
-      citim matricea anterioară jucată,
-      verificând existența acesteia în fișier.Accesăm apoi funcția de joc nou.
+Matricea este salvată într-un fișier pentru a putea fi reluată ulterior, iar momentul ultimei apăsări de taste este reținut, oferind funcționalitate autopilotului. Mesajele afișate variază în funcție de stadiul jocului, iar în cazul încheierii acestuia, utilizatorul este restricționat la inputul tastelor "Q".
 
-      În final,
-      inițializăm ecranul folosind ncurses și gestionăm input - ul tastaturii,
-      asigurându -
-          ne că acesta nu este afișat în terminal.Avem posibilitatea de a accesa
-              input -
-          ul caracter cu caracter sau de a intra în fereastra de meniu,
-      continuând astfel întreaga interacțiune cu jocul
-          .Închidem fereastra deschisă anterior pentru a menține un flux ordonat
-              al acțiunilor.
+Funcția de resume funcționează similar cu cea de joc nou, cu excepția faptului că nu inițializează tabla de joc. Se fac inițializările necesare pentru fereastra de meniu, stabilind culorile și centrand opțiunile pentru un aspect plăcut și ordonat.
+
+Opțiunile sunt selectate în funcție de tasta apăsată. În cazul opțiunii Quit, ne asigurăm că fișierul de salvare este eliberat, evitând persistența datelor. Pentru opțiunea Resume, citim matricea anterioară jucată, verificând existența ei în fișier, după care accesăm funcția de joc nou.
+
+În final, inițializăm ecranul folosind ncurses și gestionăm inputul de la tastatură, asigurându-ne că acesta nu este afișat în terminal. Putem accesa inputul caracter cu caracter sau intra în fereastra de meniu, continuând astfel interacțiunea cu jocul. Închidem fereastra deschisă anterior pentru a menține un flux ordonat al acțiunilor.
